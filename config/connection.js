@@ -7,3 +7,6 @@ const { connect, connection } = require('mongoose');
 
 //EXPORT IT
 module.exports = connection;
+
+//DIFFERENT FILES FOR CREATING THE ROUTES AND CONTROLLING THE ROUTES? 
+//CONTROLLER.JS VS ROUTES.JS

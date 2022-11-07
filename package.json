@@ -1,0 +1,26 @@
+{
+  "name": "develop_module18",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadin-a/MODULE18_SOCIAL_MEDIA_MONGOOSE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shadin-a/MODULE18_SOCIAL_MEDIA_MONGOOSE/issues"
+  },
+  "homepage": "https://github.com/shadin-a/MODULE18_SOCIAL_MEDIA_MONGOOSE#readme",
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2"
+  }
+}

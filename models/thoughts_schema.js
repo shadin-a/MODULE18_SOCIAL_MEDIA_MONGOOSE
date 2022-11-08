@@ -1,5 +1,5 @@
 //SCHEMA BASED ON USER STORY FOR THOUGHTS
-const {compareAsc, format} = require('date-fns');
+const {Schema, model} = require('date-fns');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const reaction_schema = require ('reaction_schema');

@@ -1,7 +1,7 @@
 //SEED WITH DATA TO RUN
 
 //USER SEEDS
-const seedUsers = [
+const userData = [
     {
         username: 'FrodoBaggins',
         email: 'iwilltaketheringbutidontknowtheway@gmail.com',
@@ -38,4 +38,15 @@ const seedUsers = [
           username: "SamwiseGamgee",
         },
       ];
+      
+      const seedData = async () => {
+        await Users.deleteMany({});
+        await Users.insertMany(userData);
+        await Thoughts.deleteMany({});
+        await Thoughts.insertMany(thoughtData);
+      };
+
+      seedData().then(() => {
+        mongoose.connection.close();
+      });
       

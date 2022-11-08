@@ -1,4 +1,5 @@
 //THIS FILE TO ESTABLISH A CONNECTION WITH THE DB
+require("dotenv");
 const { connect, connection } = require('mongoose');
 
 //CONNECTING CODE

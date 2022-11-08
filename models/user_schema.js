@@ -2,7 +2,7 @@
 const {Schema, model} = require('date-fns');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const reaction_schema = require ('reaction_schema');
+const reaction_schema = require ('reaction_schema'); //FOLLOWUP HERE AS WELL
 const User = model('User', UserSchema);
 
 const UserSchema = new Schema ({

@@ -2,11 +2,12 @@
 const { connect, connection } = require('mongoose');
 
 //CONNECTING CODE
-
-
+connect('mongodb://localhost', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).catch((err) => 
+    console.log(err));
 
 //EXPORT IT
 module.exports = connection;
 
-//DIFFERENT FILES FOR CREATING THE ROUTES AND CONTROLLING THE ROUTES? 
-//CONTROLLER.JS VS ROUTES.JS

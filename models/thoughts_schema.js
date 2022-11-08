@@ -3,6 +3,7 @@ const {compareAsc, format} = require('date-fns');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const reaction_schema = require ('reaction_schema');
+const Thought = model('Thought', ThoughtSchema);
 
 const ThoughtSchema = new Schema({
 thoughtText: {type: String, 
@@ -19,6 +20,12 @@ username: {
     type: String,
     required: true,
 },
+toJSON: {
+    virtuals: true,
+    getters: true,
+},
+    id: false,
+ 
 reaction: [],
 })
 
@@ -29,4 +36,4 @@ ThoughtSchema.virtual('reactionCount')
     return this.reaction.length;
 })
 
-export thoughts_schema 
+module.exports = Thought;

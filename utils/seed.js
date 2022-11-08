@@ -42,8 +42,10 @@ const userData = [
       const seedData = async () => {
         await Users.deleteMany({});
         await Users.insertMany(userData);
+        console.log('USERS SEEDED!')
         await Thoughts.deleteMany({});
         await Thoughts.insertMany(thoughtData);
+        console.log('THOUGHTS SEEDED!')
       };
 
       seedData().then(() => {

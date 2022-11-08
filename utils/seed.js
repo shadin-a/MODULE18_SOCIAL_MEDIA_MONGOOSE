@@ -19,3 +19,23 @@ const seedUsers = [
 ];
 
     //THOUGHT SEEDS
+    const thoughtData = [
+        {
+          thoughtText: "You're late.",
+          username: "FrodoBaggins",
+        },
+        {
+          thoughtText: "I tried to save the Shire, and it has been saved, but not for me. It must often be so, Sam, when things are in danger: someone has to give them up, lose them, so that others may keep them.",
+          username: "FrodoBaggins",
+        },
+        {
+          thoughtText: "Boil em, mash em, stick em in a stew.",
+          username: "SamwiseGamgee",
+        },
+        {
+          thoughtText:
+            "If I take one more step, itll be the farthest away from home Ive ever been.”",
+          username: "SamwiseGamgee",
+        },
+      ];
+      

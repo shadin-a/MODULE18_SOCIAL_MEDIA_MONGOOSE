@@ -1,9 +1,14 @@
 //SCHEMA BASED ON USER STORY FOR USERS
-const {Schema, model} = require('date-fns');
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-const reaction_schema = require ('reaction_schema'); //FOLLOWUP HERE AS WELL
-const User = model('User', UserSchema);
+//const {Schema, model} = require('date-fns');
+const {Schema, model} = require('mongoose');
+//const Schema = mongoose.Schema;
+//const reaction_schema = require ('reaction_schema'); //FOLLOWUP HERE AS WELL
+
+
+var validateEmail = function(email) {
+  var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  return re.test(email)
+};
 
 const UserSchema = new Schema ({
     username: {
@@ -30,7 +35,9 @@ const UserSchema = new Schema ({
           ref: 'User',
         },
       ],
-    toJSON: {
+    },
+    {
+      toJSON: {
           virtuals: true,
         },
         id: false,
@@ -43,6 +50,7 @@ UserSchema.virtual('friendCount')
     return this.friends.length;
   });
 
-//EXPORT
 
+//EXPORT
+const User = model('User', UserSchema);
 module.export = User;

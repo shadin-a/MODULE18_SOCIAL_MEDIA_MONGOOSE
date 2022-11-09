@@ -30,7 +30,13 @@ module.exports = {
           .catch((err) => res.status(500).json(err));
       },
     //UPDATE EXISTING THOT
-
+      updateThought(req, res) {
+        Thought.FindByIdAndUpdate(
+            req.params.id, 
+            {thoughtText: req.body.thoughtText,
+              });
+        
+      }
     //DELETE EXISTING THOT
 
     //POST A THOT REACTION

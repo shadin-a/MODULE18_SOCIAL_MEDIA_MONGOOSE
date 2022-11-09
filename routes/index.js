@@ -1,3 +1,5 @@
+//THIS INDEX.JS IS TO DIRECT THE APPLICATION TO INDEX.JS FOR API
+
 const app = require('express').Router();
 const apiRoutes = require('./api');
 

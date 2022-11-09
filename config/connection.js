@@ -3,7 +3,7 @@ require("dotenv");
 const { connect, connection } = require('mongoose');
 
 //CONNECTING CODE
-connect('mongodb://localhost', {
+connect('mongodb://localhost:27017', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).catch((err) => 

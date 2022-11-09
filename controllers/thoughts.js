@@ -1,11 +1,13 @@
 //THE ACTUAL ROUTES FOR EACH ELEMENT OF THE USER STORY FOR THOUGHTS
-const app = require("express").Router();
 const Thought = require("../models/thought");
-const User = require("../models/user");
 
 module.exports = {
     //GET A THOT (ALL)
-
+    getThoughts(req, res) {
+        Thought.find()
+            .then((users) => res.json(users))
+            .catch((err) => res.status(500).json(err));
+    },
     //GET A THOT BY ID
 
     //POST A NEW THOT

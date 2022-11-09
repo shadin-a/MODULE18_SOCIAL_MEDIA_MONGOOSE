@@ -1,5 +1,3 @@
-const app = require("express").Router();
-const Thought = require("../models/thought");
 const User = require("../models/user");
 
 module.exports = {
@@ -19,7 +17,7 @@ module.exports = {
                 : res.json(user)))
             .catch((err) => res.status(500).json(err));
     },
-    
+
     //CREATE A NEW USER
     createUser(req, res) {
         User.create(req.body)

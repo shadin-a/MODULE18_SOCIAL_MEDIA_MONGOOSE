@@ -20,7 +20,11 @@ module.exports = {
           .catch((err) => res.status(500).json(err));
     },
     //CREATE A NEW USER
-
+    createUser(req, res) {
+        User.create(req.body)
+        .then((user) => res.json(user))
+        .catch((err) => res.status(500).json(err));
+    },
     //UPDATE USER BY ID
 
     //DELETE A USER BY ID

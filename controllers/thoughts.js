@@ -5,11 +5,18 @@ module.exports = {
     //GET A THOT (ALL)
     getThoughts(req, res) {
         Thought.find()
-            .then((users) => res.json(users))
+            .then((thoughts) => res.json(thoughts))
             .catch((err) => res.status(500).json(err));
     },
-    //GET A THOT BY ID
 
+    //GET A THOT BY ID
+    getSingleThought(req, res) {
+        Thought.findById(req.params.id)
+            .then((thoughts) => (!thoughts
+                ? res.status(404).json({ message: 'Cannot find that thought!' })
+                : res.json(user)))
+            .catch((err) => res.status(500).json(err));
+    },
     //POST A NEW THOT
 
     //UPDATE EXISTING THOT
